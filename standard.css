@@ -2,11 +2,11 @@ body,
 html {
   margin: 0;
   padding: 0;
-  color: #4c4637;
+  color: #8e8d8a;
 }
 
 body {
-  background-color: #b1ab99;
+  background-color: #eae7dc;
   font-family: "Cardo", serif;
 }
 
@@ -24,16 +24,19 @@ body {
 
 #nav ul li {
   padding-right: 2em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 
 #nav ul li a {
   text-decoration: none;
-  color: #4c4637;
+  color: #8e8d8a;
   font-weight: bold;
+  font-size: 1.5em;
 }
 
 #hero {
-  background-color: #ffe018;
+  background-color: #d8c3a5;
   height: 45vh;
 }
 
@@ -56,6 +59,7 @@ h6 {
 h1 {
   font-size: 5em;
   text-align: center;
+  color: #e85a4f;
 }
 
 p {
@@ -86,7 +90,7 @@ h2 {
 }
 
 #contact {
-  background-color: #00af97;
+  background-color: #d8c3a5;
   padding: 1em;
 }
 
@@ -96,7 +100,6 @@ h2 {
   margin: 0;
   justify-content: space-around;
   padding: 0;
-  margin: 7%;
 }
 
 #contact ul li {
@@ -110,14 +113,9 @@ h2 {
   width: 25%;
   margin-left: 2em;
   margin-top: 2em;
-  border-style: solid;
-  border-color: #ffe018;
-  border-width: 25px;
 }
 
 #about-p {
-  padding-top: 4em;
   font-style: normal;
-  margin-right: 2em;
-  padding-left: 14em;
+  padding-top: 3em;
 }
