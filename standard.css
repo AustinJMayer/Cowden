@@ -112,10 +112,32 @@ p {
   display: flex;
 }
 
+#close-expandable {
+  position: absolute;
+  color: #171817;
+  right: 0.75em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  cursor: pointer;
+  display: none;
+}
+
+#expandable-box-after {
+  justify-content: space-around;
+}
+
 h2 {
   margin: auto;
   position: relative;
   left: -27%;
+  font-size: 5em;
+  text-align: center;
+  color: #afaeac;
+}
+
+h2:after {
+  display: none;
 }
 
 #contact {
