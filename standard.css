@@ -10,8 +10,103 @@ body {
   font-family: "Cardo", serif;
 }
 
-#nav {
+#main-sub {
+  color: black;
+}
+
+/* scroll button */
+
+/* *,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: table;
+}
+section.ok {
+  background-color: #555;
+}
+
+#scroll-button {
+  color: white;
+  font-family: arial;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in 3s;
+  transition: all 0.5s ease-in 3s;
+}
+
+.scroll-down {
   position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #e85a4f;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  transform: scale(1);
+}
+
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid #e85a4f;
+  border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}*/
+
+#scroll-section {
+  height: 10vh;
+}
+
+#nav {
+  position: fixed;
   right: 0;
   margin-right: 2em;
 }
@@ -30,9 +125,17 @@ body {
 
 #nav ul li a {
   text-decoration: none;
-  color: #eae7dc;
+  color: black;
   font-weight: bold;
   font-size: 1.5em;
+}
+
+#container {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #hero {
@@ -51,32 +154,35 @@ h6 {
   margin: 0;
 }
 
-#heading {
-  top: 25%;
-  position: relative;
-}
-
 h1 {
-  font-size: 5em;
-  text-align: center;
+  font-size: 10em;
+  text-align: left;
   color: #e85a4f;
 }
 
 p {
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-size: 2em;
   padding-bottom: 2em;
   font-style: oblique;
-  color: #eae7dc;
+  color: black;
 }
 
 #examples {
   height: fit-content;
 }
 
-.img-box-1 {
+/* .img-link {
   width: 15%;
+  height: 15%;
+} */
+
+.img-link {
+  width: 1em;
+}
+
+.img-box-1 {
   cursor: pointer;
   margin-left: 2em;
   margin-top: 2em;
@@ -84,56 +190,56 @@ p {
 .img-box-1,
 .img-box-2,
 .img-box-3 {
-  width: 15%;
-  height: 15%;
+  width: 12em;
   cursor: pointer;
   margin-left: 2em;
   margin-top: 2em;
   border-style: solid;
   border-color: #171817;
   border-width: 0.75em;
-  position: relative;
+  position: absolute;
 }
 
 .img-box-2 {
-  left: -17%;
+  left: 1%;
   margin-top: 3em;
 }
 
 .img-box-3 {
-  left: -34%;
+  left: 2%;
   margin-top: 4em;
 }
 
 .expandable-box {
-  padding-bottom: 2em;
+  padding-bottom: 15em;
   width: 100%;
   height: fit-content;
   display: flex;
 }
 
-#close-expandable {
+.close-expandable {
   position: absolute;
   color: #171817;
   right: 0.75em;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  font-style: normal;
+  font-style: bold;
   cursor: pointer;
   display: none;
+  font-size: 2em;
 }
 
-#expandable-box-after {
-  justify-content: space-around;
+.img-box:hover:after {
+  opacity: 0.5;
 }
 
 h2 {
   margin: auto;
-  position: relative;
-  left: -27%;
-  font-size: 5em;
+  font-size: 3em;
   text-align: center;
   color: #afaeac;
+  cursor: pointer;
+  margin-top: 2em;
 }
 
 h2:after {
@@ -143,6 +249,7 @@ h2:after {
 #contact {
   background-color: #656967;
   padding: 1em;
+  height: 10vh;
 }
 
 #contact ul {
@@ -162,19 +269,43 @@ h2:after {
 
 #about img {
   float: left;
-  width: 25%;
+  width: 15%;
   margin-left: 2em;
   margin-top: 2em;
+  padding-right: 2em;
 }
 
 #about-p {
   font-style: normal;
   padding-top: 3em;
   color: #8e8d8a;
+  padding-right: 2em;
 }
 
 .about-nav ul li a {
   color: #656967 !important;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+}
+
+#about-contact {
+  position: absolute;
+  bottom: 0;
+  background-color: #656967;
+  padding-top: 1em;
+  width: 100vw;
+  padding-bottom: 1em;
+}
+
+#about-contact ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  justify-content: space-around;
+  padding: 0;
+}
+
+#about-contact ul li {
+  cursor: pointer;
+  color: #eae7dc;
 }
